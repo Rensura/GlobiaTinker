@@ -553,6 +553,36 @@ public final class TinkersMaterialsCore {
         )
         .build();
 
+    private static final TinkerMaterial SMITHIUM = new TinkerMaterial(Ids.SMITHIUM, Materials.INGOT_CAST_SMITHIUM, "#6E7F80")
+        .setLiquidTexture(SkullTextures.ALLOY_SILVER)
+        .setFormNugget(Materials.NUGGET_CAST_SMITHIUM.getItemId())
+        .setFormIngot(Materials.INGOT_CAST_SMITHIUM.getItemId())
+        .setFormBlock(Materials.BLOCK_CAST_SMITHIUM.getItemId())
+        .setTraitToolHead(Traits.CORE_SMITHIUM_HEAD)
+        .setTraitToolRod(Traits.CORE_SMITHIUM_ROD)
+        .setTraitArmorPlates(Traits.CORE_SMITHIUM_PLATES)
+        .setTraitArmorLinks(Traits.CORE_SMITHIUM_LINKS)
+        .addAlloyRecipe(
+            IRON.getLiquidItemStack(3),
+            COPPER.getLiquidItemStack(2),
+            SILVER.getLiquidItemStack(1)
+        )
+        .build();
+
+    private static final TinkerMaterial ANNIVERSARIUM = new TinkerMaterial(Ids.ANNIVERSARIUM, Materials.INGOT_CAST_ANNIVERSARIUM, "#32b41e")
+        .setLiquidTexture(SkullTextures.ALLOY_RED)
+        .setFormNugget(Materials.NUGGET_CAST_ANNIVERSARIUM.getItemId())
+        .setFormIngot(Materials.INGOT_CAST_ANNIVERSARIUM.getItemId())
+        .setFormBlock(Materials.BLOCK_CAST_ANNIVERSARIUM.getItemId())
+        .setTraitArmorPlates(Traits.CORE_ANNIVERSARIUM_PLATES)
+        .addAlloyRecipe(
+            REINFORCED_ALLOY.getLiquidItemStack(2),
+            HARDENED_METAL.getLiquidItemStack(2),
+            DAMASCUS_STEEL.getLiquidItemStack(2),
+            ALUMINUM_BRASS.getLiquidItemStack(2)
+        )
+        .build();
+
     static {
         CM_MAP.put(Ids.IRON, IRON);
         CM_MAP.put(Ids.GOLD, GOLD);
@@ -601,6 +631,8 @@ public final class TinkersMaterialsCore {
         CM_MAP.put(Ids.PURIFIED_PASSION, PURIFIED_PASSION);
         CM_MAP.put(Ids.LIQUID_LOVE, LIQUID_LOVE);
         CM_MAP.put(Ids.NICEINIUM, NICEINIUM);
+        CM_MAP.put(Ids.SMITHIUM, SMITHIUM);
+        CM_MAP.put(Ids.ANNIVERSARIUM, ANNIVERSARIUM);
     }
 
     public static Map<String, TinkerMaterial> getCmMap() {
